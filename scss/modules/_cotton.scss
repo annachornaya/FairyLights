@@ -1,0 +1,36 @@
+.cotton-block {
+  margin: 50px 0;
+
+  .section-cotton {
+    
+    &__bcg {
+      height: 600px;
+      background: #fcecdf;
+      position: relative;
+
+      @media (max-width: $mobile) {
+        height: 207px;
+        margin-left: 0;
+        width: 70%;
+      }
+    }
+
+    &__img {
+      @include pos($t: 30px, $l: 45px);
+
+      @media (max-width: $mobile) {
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        left: 20px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      height: auto;
+      &__image {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

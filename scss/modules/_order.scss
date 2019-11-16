@@ -1,0 +1,136 @@
+.footer-block {
+  margin: 100px 0 120px;
+  .order {
+    &__fieldset {
+      margin: 50px 0;
+    }
+
+    &__description {
+      @media (max-width: $mobile) {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &::before {
+        content: "";
+        background: url("../images/before-text.png") no-repeat center;
+        width: 7px;
+        height: 7px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+
+    &__button {
+      width: 50%;
+      height: 40px;
+      background: #fcecdf;
+      font: 16px/24px $mPlus1p;
+      font-weight: 300;
+      color: #161515;
+      cursor: pointer;
+
+      @media (max-width: $mobile) {
+        font-size: 12px;
+        line-height: 14px;
+        width: 100%;
+      }
+    }
+
+    &__icons {
+      margin-left: 0;
+      margin-top: 50px;
+    }
+  }
+
+  .order-phone__input {
+    border-bottom: 2px solid #8c776d;
+    width: 50%;
+    margin: 20px auto 20px 0;
+    font: 16px/24px $mPlus1p;
+    font-weight: 300;
+    color: #161515;
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      line-height: 12px;
+      width: 100%;
+      padding: 5px 0;
+    }
+  }
+
+  .delivery {
+    &__name {
+      @media (max-width: $mobile) {
+        margin-top: 40px;
+      }
+    }
+
+    &__block {
+      margin-top: 50px;
+    }
+
+    &__icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .scroll-up-block {
+    .scroll-up {
+      background: url("../images/arrow-up.png") no-repeat;
+      width: 45px;
+      height: 45px;
+      display: block;
+      position: relative;
+      transition: all 0.3s;
+      animation: scroll-arrow 1.5s ease-in-out infinite;
+      margin: auto;
+      display: block;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+
+      @keyframes scroll-arrow {
+        0% {
+          top: 0;
+        }
+
+        50% {
+          top: 20px;
+        }
+
+        100% {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin: 30px 0;
+    .order {
+      &__fieldset {
+        margin: 20px 0;
+      }
+      &__icons {
+        margin-top: 20px;
+      }
+    }
+    .delivery {
+      &__name {
+        margin-top: 20px;
+      }
+      &__block {
+        margin-top: 20px;
+      }
+      &__icons {
+        li {
+            width: 70px;
+        }
+      }
+    }
+  }
+}

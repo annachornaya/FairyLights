@@ -1,0 +1,70 @@
+.scroll-down-block {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+
+    .scroll-down {
+        background: url('../images/icon-arrow.png') no-repeat;
+        width: 45px;
+        display: block;
+        height: 45px;
+        position: relative;
+        transition: all .3s;
+        animation: scroll-arrow 1.5s ease-in-out infinite;
+        margin: auto;
+    
+        
+    
+        @keyframes scroll-arrow {
+            0% {
+                top: 0;
+            }
+    
+            50% {
+                top: 20px;
+            }
+    
+            100% {
+                top: 0;
+            }
+        }
+    }
+    
+    .scroll-up {
+        background: url('../images/arrow-up.png') no-repeat;
+        width: 45px;
+        height: 45px;
+        display: block;
+        position: relative;
+        transition: all .3s;
+        animation: scroll-arrow 1.5s ease-in-out infinite;
+        margin: auto;
+        display: block;
+    
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    
+        @keyframes scroll-arrow {
+            0% {
+                top: 0;
+            }
+    
+            50% {
+                top: 20px;
+            }
+    
+            100% {
+                top: 0;
+            }
+        }
+    }
+    
+    .scroll-page {
+        height: 150px;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}

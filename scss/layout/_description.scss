@@ -1,0 +1,89 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font: 36px/42px $poiretOne;
+
+  @media (max-width: $mobile) {
+    font-size: 18px;
+    line-height: 21px;
+
+  }
+}
+
+.price {
+  font: 24px/28px $poiretOne;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &::before {
+    content: "";
+    background: url(../images/icon-price.png) no-repeat center;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 20px;
+
+    @media (max-width: $mobile) {
+        background: url(../images/icon-price-small.png) no-repeat center;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.gift {
+  font: 24px/28px $poiretOne;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &::before {
+    content: "";
+    background: url(../images/icon-gift.png) no-repeat center;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 20px;
+
+    @media (max-width: $mobile) {
+      background: url(../images/icon-gift-small.png) no-repeat center;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.description {
+  // margin-top: 140px;
+
+  li {
+    line-height: 48px;
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      line-height: 28px;
+    }
+  }
+}
+
+.price,
+.gift {
+  margin: 20px 0;
+
+  @media (max-width: $mobile) {
+      margin: 10px 0;
+  }
+}
